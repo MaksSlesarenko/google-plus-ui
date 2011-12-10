@@ -399,7 +399,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog { position: absolute; padding: 0; width: 300px; overflow: hidden; }
 .ui-dialog .ui-dialog-titlebar { padding: .6em 1em; position: relative; border-width: 0 0 1px 0; border-radius: 0;}
 .ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .1em 0; } 
-.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: -1px; width: 19px; margin: 0; height: 18px; border: 1px solid #AAAAAA;  padding: 2px 12px 4px; background-color: #E6E6E6;}
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: -1px; width: 19px; margin: 0; height: 18px; border: 1px solid #AAAAAA;  padding: 2px 12px 4px; background-color: #E6E6E6;border-top-left-radius: 0;border-top-right-radius: 0;}
 .ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { }
 .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
