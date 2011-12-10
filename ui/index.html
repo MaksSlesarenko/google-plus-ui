@@ -16,6 +16,48 @@
 				$('#tabs').tabs();
 				
 				$('#buttonset').buttonset();
+				$("#radio").buttonset();
+				$("#check").button();
+				$( "#rerun" )
+	            .button()
+	            .click(function() {
+	                alert( "Running the last action" );
+	            })
+	            .next()
+	                .button( {
+	                    text: false,
+	                    icons: {
+	                        primary: "ui-icon-triangle-1-s"
+	                    }
+	                })
+	                .click(function() {
+	                    alert( "Could display a menu to select an action" );
+	                })
+	                .parent()
+	                    .buttonset();
+				
+				$('#button-with-icons button:first-child').button({
+		            icons: {
+		                primary: "ui-icon-locked"
+		            },
+		            text: false
+		        }).next().button({
+		            icons: {
+		                primary: "ui-icon-locked"
+		            }
+		        }).next().button({
+		            icons: {
+		                primary: "ui-icon-gear",
+		                secondary: "ui-icon-triangle-1-s"
+		            }
+		        }).next().button({
+		            icons: {
+		                primary: "ui-icon-gear",
+		                secondary: "ui-icon-triangle-1-s"
+		            },
+		            text: false
+		        });
+				
 
 				// Dialog			
 				$('#dialog').dialog({
@@ -183,11 +225,44 @@
 		
 		<!-- ui-buttonset -->
 		<br />
-        <div id="buttonset">
-            <button>B</button>
-            <button>I</button>
-            <button>U</button>
-        </div>
+		<h2 class="demoHeaders">Buttons</h2>
+		
+		<dl>
+		    <dt>Checkbox Set</dt>
+		    <dd>
+		        <div id="buttonset">
+		            <input type="checkbox" id="check1" /><label for="check1">B</label>
+				    <input type="checkbox" id="check2" /><label for="check2">I</label>
+				    <input type="checkbox" id="check3" /><label for="check3">U</label>
+	            </div>
+            </dd>
+            <dt>Radio</dt>
+            <dd>
+		        <div id="radio">
+			        <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
+			        <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
+			        <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+			    </div>
+		    </dd>
+		    <dt> Toggle Button</dt>
+	        <dd><input type="checkbox" id="check" /><label for="check">Toggle</label></dd>
+	        <dt>Split Button</dt>
+	        <dd>
+			    <div>
+				    <button id="rerun">Run last action</button>
+			        <button id="select">Select an action</button>
+		        </div>
+	        </dd>
+	        <dt>Buttons with icons</dt>
+	        <dd>
+	            <div id="button-with-icons">
+	                <button>Button with icon only</button>
+					<button>Button with icon on the left</button>
+					<button>Button with two icons</button>
+					<button>Button with two icons and no text</button>
+	            </div>
+	        </dd>
+        </dl>
 			
 				
 				
